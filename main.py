@@ -1,3 +1,13 @@
+def save_result_to_file(name, roll, total, percentage, grade):
+    with open("results.txt", "a") as file:
+        file.write("Name: " + name + "\n")
+        file.write("Roll: " + roll + "\n")
+        file.write("Total Marks: " + str(total) + "\n")
+        file.write("Percentage: " + str(percentage) + "\n")
+        file.write("Grade: " + grade + "\n")
+    
+
+
 def get_valid_name():
     while True:
         name = input("Enter your name: ").strip()
@@ -66,6 +76,8 @@ def main():
         print("Total Marks:", total)
         print("Percentage:", percentage)
         print("Grade:", grade)
+        save_result_to_file(name, roll, total, percentage, grade)
+
 
 
 
