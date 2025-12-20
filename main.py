@@ -32,37 +32,45 @@ def get_valid_marks(subject):
             print("Invalid input! Please enter numeric value only.")
 
 
-
-n=int(input("Enter the number of students :-"))
-for i in range(n):
- print("---- students",i+1,"-----")
- name=get_valid_name()
- roll=get_valid_roll()
- m1=get_valid_marks("Physics")
- m2=get_valid_marks("chemistry")
- m3=get_valid_marks("maths")
-
-
- total = m1 + m2 + m3
- percentage = total / 3
+def calculate_grade(percentage):
+    if percentage >= 90:
+        return "A"
+    elif percentage >= 75:
+        return "B"
+    elif percentage >= 60:
+        return "C"
+    else:
+        return "Fail"
 
 
- if percentage >= 90:
-    grade = "A"
- elif percentage >= 75:
-    grade = "B"
- elif percentage >= 60:
-    grade = "C"
- else:
-    grade = "Fail"
+def main():
+    n = int(input("Enter number of students: "))
+
+    for i in range(n):
+        print("\n--- Student", i + 1, "---")
+
+        name = get_valid_name()
+        roll = get_valid_roll()
+
+        physics = get_valid_marks("Physics")
+        chemistry = get_valid_marks("Chemistry")
+        maths = get_valid_marks("Maths")
+
+        total = physics + chemistry + maths
+        percentage = total / 3
+        grade = calculate_grade(percentage)
+
+        print("\n--- Result ---")
+        print("Name:", name)
+        print("Roll:", roll)
+        print("Total Marks:", total)
+        print("Percentage:", percentage)
+        print("Grade:", grade)
 
 
- print("\n--- Result ---")
- print("Name:", name)
- print("Roll:", roll)
- print("Total Marks:", total)
- print("Percentage:", percentage)
- print ("grade:-",grade)
+
+if __name__ == "__main__":
+    main()
 
 
 
