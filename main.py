@@ -17,6 +17,15 @@ def get_valid_name():
             print("Invalid name! Use alphabets only.")
 
 
+def get_valid_stu_number():
+    while True:
+        n=input("Enter the number of students:-")
+        if n.isdigit():
+               return(int(n))
+        else:
+            print("Invaild input,\"Enter number only\"")
+
+
 
 
 def get_valid_roll():
@@ -54,7 +63,9 @@ def calculate_grade(percentage):
 
 
 def main():
-    n = int(input("Enter number of students: "))
+   
+    n= get_valid_stu_number()
+   
 
     for i in range(n):
         print("\n--- Student", i + 1, "---")

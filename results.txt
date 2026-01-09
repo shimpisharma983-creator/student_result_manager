@@ -1,0 +1,10 @@
+Name: sam
+Roll: 23
+Total Marks: 239
+Percentage: 79.66666666666667
+Grade: B
+Name: ruhi
+Roll: 43
+Total Marks: 244
+Percentage: 81.33333333333333
+Grade: B
